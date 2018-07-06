@@ -1,6 +1,6 @@
 {
   "name": "egg-acr",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "elegant, easy-to-extend asynchronous validation component.",
   "eggPlugin": {
     "name": "acr"
@@ -42,7 +42,8 @@
   "files": [
     "app",
     "config",
-    "app.js"
+    "app.js",
+    "index.d.ts"
   ],
   "ci": {
     "version": "8, 9"
