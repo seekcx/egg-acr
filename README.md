@@ -53,7 +53,7 @@ const { name } = await ctx.validate({
 
 ```
 
-更详细的例子可以参考：[测试用例](test/fixtures/apps/acr-test/controller/home.js)
+更详细的例子可以参考：[测试用例](test/fixtures/apps/acr-test/app/controller/home.js)
 
 了解 acr 才能更好的使用此组件，相关信息请移步 [acr](https://github.com/seekcx/acr#%E9%85%8D%E7%BD%AE)
 
