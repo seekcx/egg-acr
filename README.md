@@ -3,9 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
-[![David deps][david-image]][david-url]
-[![Known Vulnerabilities][snyk-image]][snyk-url]
-[![npm download][download-image]][download-url]
+[![license](https://img.shields.io/github/license/seekcx/acr.svg?style=flat-square)](LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/egg-acr.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-acr
@@ -13,24 +11,16 @@
 [travis-url]: https://travis-ci.org/seekcx/egg-acr
 [codecov-image]: https://img.shields.io/codecov/c/github/seekcx/egg-acr.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/seekcx/egg-acr?branch=master
-[david-image]: https://img.shields.io/david/seekcx/egg-acr.svg?style=flat-square
-[david-url]: https://david-dm.org/seekcx/egg-acr
-[snyk-image]: https://snyk.io/test/npm/egg-acr/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/egg-acr
-[download-image]: https://img.shields.io/npm/dm/egg-acr.svg?style=flat-square
-[download-url]: https://npmjs.org/package/egg-acr
 
-<!--
-Description here.
--->
+基于 [acr](https://github.com/seekcx/acr) 开发的验证组件。
 
-## Install
+## 安装
 
 ```bash
-$ npm i egg-acr --save
+$ npm i egg-acr
 ```
 
-## Usage
+## 使用
 
 ```js
 // {app_root}/config/plugin.js
@@ -40,23 +30,36 @@ exports.acr = {
 };
 ```
 
-## Configuration
+## 配置
 
 ```js
 // {app_root}/config/config.default.js
 exports.acr = {
+    lang: 'zh-cn',
 };
 ```
 
-see [config/config.default.js](config/config.default.js) for more detail.
+查看 [acr#配置](https://github.com/seekcx/acr#%E9%85%8D%E7%BD%AE) 获取更多配置信息。
 
-## Example
+## 示例
 
-<!-- example here -->
+```js
+// 在控制器的方法中
 
-## Questions & Suggestions
+const { ctx, app: { acr } } = this;
+const { name } = await ctx.validate({
+    name: acr.string('昵称').required().equal('abel'),
+});
 
-Please open an issue [here](https://github.com/seekcx/egg/issues).
+```
+
+更详细的例子可以参考：[测试用例](test/fixtures/apps/acr-test/controller/home.js)
+
+了解 acr 才能更好的使用此组件，相关信息请移步 [acr](https://github.com/seekcx/acr#%E9%85%8D%E7%BD%AE)
+
+## 问题和建议
+
+请到 [Issues](https://github.com/seekcx/egg-acr/issues) 提问交流.
 
 ## License
 
