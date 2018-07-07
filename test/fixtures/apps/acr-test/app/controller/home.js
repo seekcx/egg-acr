@@ -6,13 +6,6 @@ class HomeController extends Controller {
     async index() {
         const { ctx, app } = this;
 
-        app.acr.type('string')
-            .define('test', value => {
-                if (value !== 'abel') {
-                    throw new Error('who are you?');
-                }
-            });
-
         const { name } = await ctx.validate({
             name: app.acr.string({ name: '姓名', transform: () => 'seeker' })
                 .required()

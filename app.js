@@ -11,4 +11,6 @@ module.exports = app => {
     });
 
     app.acr = new Acr(config);
+
+    typeof config.rules === 'function' && config.rules(app.acr, { app, ctx });
 };

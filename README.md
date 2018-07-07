@@ -41,6 +41,21 @@ exports.acr = {
 
 查看 [acr#配置](https://github.com/seekcx/acr#%E9%85%8D%E7%BD%AE) 获取更多配置信息。
 
+除了 acr 自带的配置外，插件还提供了一个 `rules` 参数用于自定义验证规则。
+
+```js
+// {app_root}/config/config.default.js
+exports.acr = {
+    lang: 'zh-cn',
+    rules: (acr, { app, ctx }) => {
+        acr.type('string')
+            .define('test', value => {
+                return value === 'abel';
+            });
+    }
+};
+```
+
 ## 示例
 
 ```js
