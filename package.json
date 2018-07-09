@@ -1,6 +1,6 @@
 {
   "name": "egg-acr",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "elegant, easy-to-extend asynchronous validation component.",
   "eggPlugin": {
     "name": "acr"
@@ -14,7 +14,7 @@
     "validation"
   ],
   "dependencies": {
-    "acr": "^1.1.1"
+    "acr": "^1.1.3"
   },
   "devDependencies": {
     "autod": "^3.0.0",
