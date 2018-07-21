@@ -12,7 +12,7 @@
 [codecov-image]: https://img.shields.io/codecov/c/github/seekcx/egg-acr.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/seekcx/egg-acr?branch=master
 
-基于 [acr](https://github.com/seekcx/acr) 开发的验证组件。
+基于 [acr](https://github.com/seekcx/acr) 开发的异步验证组件。
 
 ## 安装
 
