@@ -41,6 +41,7 @@
   },
   "files": [
     "app",
+    "index.d.ts",
     "config",
     "app.js"
   ],
