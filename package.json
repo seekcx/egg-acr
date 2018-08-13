@@ -14,7 +14,7 @@
     "validation"
   ],
   "dependencies": {
-    "acr": "^1.1.5"
+    "acr": "^1.1.7"
   },
   "devDependencies": {
     "autod": "^3.0.0",
